@@ -9,7 +9,11 @@
  */
 
 export default {
-	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
-	},
+  async queue(batch, env) {
+    // Do something with messages in the batch
+    // i.e. write to R2 storage, D1 database, or POST to an external API
+    // You can also iterate over each message in the batch by looping over batch.messages
+	const messages = JSON.stringify(batch.messages);
+	console.log(`Received batch: ${messages}`);
+  },
 };
