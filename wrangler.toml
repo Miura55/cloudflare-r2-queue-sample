@@ -11,4 +11,4 @@ compatibility_flags = ["nodejs_compat"]
 enabled = true
 
 [[queues.consumers]]
-queue = "r2-event"
+queue = "r2-event-queue"
